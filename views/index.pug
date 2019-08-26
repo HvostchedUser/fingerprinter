@@ -11,6 +11,21 @@ html(lang="en")
         .container
             .row
                 .col-6
+                    h2 Info from geoip
+                    b IP-Address: 
+                    span = gip.ip
+                    br
+                    b Country: 
+                    span = gip.country
+                    br
+                    b Region: 
+                    span= gip.region
+                    b City: 
+                    span = gip.city
+                    br
+                    b Timezone:
+                    span= gip.timezone
+
                     h2 Browser Info from request
                     b User-Agent:
                     span= headers.userAgent

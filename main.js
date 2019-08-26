@@ -14,8 +14,9 @@ app.get('/', function (req, res) {
     const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
     console.log(ip);
     const gip = geoip.lookup(ip);
+    gip.ip = ip;
     console.log(gip);
-    res.render('index', {headers});
+    res.render('index', {headers, gip});
 });
 
 const PORT = process.env.PORT || 3000;
