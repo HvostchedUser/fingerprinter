@@ -1,12 +1,16 @@
+const options = {
+    excludes: {userAgent: true}
+}
+
 if (window.requestIdleCallback) {
     requestIdleCallback(function () {
-        Fingerprint2.get(function (components) {
+        Fingerprint2.get(options, function (components) {
             printInfo(components);
         })
     })
 } else {
     setTimeout(function () {
-        Fingerprint2.get(function (components) {
+        Fingerprint2.get(options, function (components) {
             printInfo(components);
         })  
     }, 500)
