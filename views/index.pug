@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Identitiy
+        link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/fingerprintjs2/2.1.0/fingerprint2.min.js")
+    body
+        .container
+            .row
+                .col-6
+                    h2 Browser Info from request
+                    b User-Agent:
+                    span= headers.userAgent
+                    br
+                    b Accept:
+                    span= headers.accept
+                    br
+                    b Accept Languages:
+                    span= headers.acceptLanguage
+                    br
+                    b Accept encoding
+                    span= headers.acceptEncoding
+                    br
+                    b If None Match
+                    span= headers.ifNoneMatch
+
+                .col-6
+                    h2 Info from fingerprint 2 JS
+                    .cntnr
+        script(src="index.js")
