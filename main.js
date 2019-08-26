@@ -12,7 +12,7 @@ app.get('/', function (req, res) {
     res.render('index', {headers});
 });
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, function () {
   console.log(`Started on ${PORT}`);
