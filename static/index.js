@@ -62,7 +62,7 @@ function printInfo(components) {
     console.log(murmur)
 
     const cont = document.querySelector(".cntnr")
-    cont.innerHTML = cont.innerHTML + `<b>HASH: </b> ${murmur}<br>`;
+    cont.innerHTML = cont.innerHTML + `<b>Fingerprint: </b> ${murmur}<br>`;
     for (let el of components)
         cont.innerHTML = cont.innerHTML + `<b>${el.key}: </b> ${el.value}<br>`;
 }
